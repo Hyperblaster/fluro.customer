@@ -1,5 +1,5 @@
 angular.module('fluro.customer', ['fluro.config'])
-.service('FluroCustomerService', function($sessionStorage, $localStorage, Fluro, FluroTokenService) {
+.service('FluroCustomerService', function($sessionStorage, $localStorage, $q, Fluro, FluroTokenService) {
 
     var controller = {};
 
