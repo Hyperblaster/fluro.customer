@@ -151,9 +151,6 @@ angular.module('fluro.customer', ['fluro.config'])
             deferred.resolve(config);
         }
 
-        //Tack this onto the promise
-        deferred.bypassInterceptor = true;
-        
         //Return the promise
         return deferred.promise;
     }
