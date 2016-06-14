@@ -34,13 +34,13 @@ angular.module('fluro.customer', ['fluro.config'])
             storage.$customer = res.data;
 
             ////////////////////////////////////////
-            console.log('Customer Login Sucess', storage.$customer);
+            //console.log('Customer Login Sucess', storage.$customer);
         }
 
         ////////////////////////
 
         function loginFailed(res) {
-            console.log('Customer Login Failed', res);
+            //console.log('Customer Login Failed', res);
         }
 
         ////////////////////////
@@ -120,13 +120,13 @@ angular.module('fluro.customer', ['fluro.config'])
                     //Update with the new token
                     config.headers.Authorization = 'Bearer ' + storage.$customer.token;
  					
- 					console.log('Customer refresh success', res);
+ 					//console.log('Customer refresh success', res);
  					//Finish up and resolve
                     deferred.resolve(config);
                 }
 
                 function refreshFailed(res) {
-                    console.log('Customer refresh failed', res)
+                    //console.log('Customer refresh failed', res)
                     deferred.reject(config);
                 }
 
@@ -139,14 +139,14 @@ angular.module('fluro.customer', ['fluro.config'])
                 //////////////////////////////////////////////
 
             } else {
-                console.log('Customer still logged in', storage.$customer.token);
+                //console.log('Customer still logged in', storage.$customer.token);
                 config.headers.Authorization = 'Bearer ' + storage.$customer.token;
                 deferred.resolve(config);
             }
 
         } else {
             
-            console.log('Doesnt expire so keep on keeping on')
+            //console.log('Doesnt expire so keep on keeping on')
             config.headers.Authorization = 'Bearer ' + storage.$customer.token;
             deferred.resolve(config);
         }
@@ -224,10 +224,10 @@ angular.module('fluro.customer', ['fluro.config'])
 
                     //If the refresh token was invalid delete the customer session
                     if (res == 'invalid_refresh_token') {
-                        console.log('your token has expired');
+                        //console.log('your token has expired');
                         controller.deleteSession();
                     } else {
-                        console.log('error refreshing token', res);
+                        //console.log('error refreshing token', res);
                     }
 
                     //Add in an error callback if needed here
