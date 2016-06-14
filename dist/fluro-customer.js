@@ -243,4 +243,4 @@ angular.module('fluro.customer', ['fluro.config'])
     ////////////////////////////
 
     return controller;
-})
+});
