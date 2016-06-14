@@ -92,9 +92,9 @@ angular.module('fluro.customer', ['fluro.config'])
         ////////////////////////////////////////
 
         // //Include the bearer token in the request
-        // config.headers = {
-        //     Authorization: 'Bearer ' + storage.$customer.token
-        // }
+        config.headers = {
+            Authorization: 'Bearer ' + storage.$customer.token
+        }
 
         ////////////////////////////////////////
         ////////////////////////////////////////
