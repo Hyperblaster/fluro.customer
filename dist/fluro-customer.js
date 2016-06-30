@@ -7,6 +7,13 @@ angular.module('fluro.customer', ['fluro.config'])
     controller.defaultStorage = 'local';
 
     ////////////////////////////
+
+    //Function for getting the current customer if logged in
+    controller.get = function() {
+        var storage = controller.customerStorageLocation();
+        return storage.customer;
+    }
+
     ////////////////////////////
 
     //Return the session storage by default
