@@ -1,6 +1,3 @@
-
-console.log('Fluro Customer Init');
-
 angular.module('fluro.customer', ['fluro.config'])
 .service('FluroCustomerService', function($sessionStorage, $localStorage, $q, $injector, Fluro, FluroTokenService) {
 
@@ -60,13 +57,13 @@ angular.module('fluro.customer', ['fluro.config'])
             storage.customer = res.data;
 
             ////////////////////////////////////////
-            //console.log('Customer Login Success', storage.customer);
+            console.log('Customer Login Success', controller.defaultStorage, storage.customer);
         }
 
         ////////////////////////
 
         function loginFailed(res) {
-            //console.log('Customer Login Failed', res);
+            console.log('Customer Login Failed', res);
         }
 
         ////////////////////////
