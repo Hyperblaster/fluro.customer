@@ -5,7 +5,7 @@
   "authors": [
     "Cade Embery"
   ],
-  "main": "./dist/fluro-customer.js",
+  "main": "./dist/fluro.customer.js",
   "version": "1.0.0",
   "repository": {
     "type": "git",
